@@ -51,15 +51,15 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="demoTabPagerCustom"
             android:text="Tab and VPager Custom Tab" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:onClick="demoImgSwitcher"
             android:text="ImageSwitcher" />
     </LinearLayout>
@@ -86,6 +86,25 @@
             android:layout_height="match_parent"
             android:onClick="demoListV"
             android:text="ListView Text and Image" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="demoDlgFragment"
+            android:text="DialogFragment" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="demoCustomEnter"
+            android:text="Custom Enter" />
 
     </LinearLayout>
 

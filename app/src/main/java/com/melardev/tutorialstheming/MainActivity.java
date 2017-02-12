@@ -68,4 +68,12 @@ public class MainActivity extends AppCompatActivity {
     public void demoListV(View view) {
         startDemo(ActivityListView.class);
     }
+
+    public void demoDlgFragment(View view) {
+        startDemo(ActivityDialogFragment.class);
+    }
+
+    public void demoCustomEnter(View view) {
+        startDemo(ActivityCustomEnter.class);
+    }
 }

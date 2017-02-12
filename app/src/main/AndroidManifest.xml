@@ -34,7 +34,9 @@
         </service>
 
         <activity android:name=".ActivityLiveWallpaper" />
+        <activity android:name=".ActivityCustomEnter" />
         <activity android:name=".ActivitySnackBar" />
+        <activity android:name=".ActivityDialogFragment" />
         <activity android:name=".ActivityColorPicker" />
         <activity android:name=".ActivityImageSwitcher" />
         <activity android:name=".ActivityExpandableListView" />
@@ -51,7 +53,7 @@
         <activity android:name=".ActivityListView" />
         <activity android:name=".ActivityStackView" />
         <activity android:name=".ActivityDialogs" />
-        <activity android:name=".ActivityColorPickerAdv"/>
+        <activity android:name=".ActivityColorPickerAdv" />
         <activity android:name=".ActivityImmersive" />
     </application>
 
