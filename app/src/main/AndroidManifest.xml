@@ -15,7 +15,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -34,6 +33,26 @@
             </intent-filter>
         </service>
 
+        <activity android:name=".ActivityLiveWallpaper" />
+        <activity android:name=".ActivitySnackBar" />
+        <activity android:name=".ActivityColorPicker" />
+        <activity android:name=".ActivityImageSwitcher" />
+        <activity android:name=".ActivityExpandableListView" />
+        <activity android:name=".ActivityRecycler" />
+        <activity
+            android:name=".ActivityTabIcon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityTabIconText"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityTabCustomView"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityListView" />
+        <activity android:name=".ActivityStackView" />
+        <activity android:name=".ActivityDialogs" />
+        <activity android:name=".ActivityColorPickerAdv"/>
+        <activity android:name=".ActivityImmersive" />
     </application>
 
 </manifest>

@@ -67,9 +67,9 @@ public class ServiceWallpaper extends WallpaperService {
                 if (canvas != null) {
                     if (event.getAction() == MotionEvent.ACTION_MOVE) {
                         if (event.getX() - x > 0) //RIGHT
-                            MainActivity.color += 25;
+                            ActivityLiveWallpaper.color += 25;
                         else if (event.getX() - x < 0) //LEFT
-                            MainActivity.color -= 25;
+                            ActivityLiveWallpaper.color -= 25;
                     }
                     Paint p = new Paint();
                     p.setColor(Color.WHITE);
@@ -81,7 +81,7 @@ public class ServiceWallpaper extends WallpaperService {
 
                     Rect rect = new Rect();
                     canvas.getClipBounds(rect);
-                    canvas.drawColor(MainActivity.color);
+                    canvas.drawColor(ActivityLiveWallpaper.color);
                     if (event.getX() != x || event.getY() != y)
                         canvas.drawText("X : " + x + " Y: " + y, rect.centerX(), rect.centerY(), p);
                 }
@@ -102,7 +102,7 @@ public class ServiceWallpaper extends WallpaperService {
             try {
                 canvas = holder.lockCanvas();
                 if (canvas != null) {
-                    canvas.drawColor(MainActivity.color);
+                    canvas.drawColor(ActivityLiveWallpaper.color);
                 }
             } finally {
                 if (canvas != null)
