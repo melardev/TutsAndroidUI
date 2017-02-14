@@ -17,4 +17,9 @@
         <item name="android:windowMinWidthMajor">97%</item>
         <item name="android:windowMinWidthMinor">97%</item>
     </style>
+
+    <style name="AppTheme.NoTitleDialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <!--<item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>-->
+    </style>
 </resources>

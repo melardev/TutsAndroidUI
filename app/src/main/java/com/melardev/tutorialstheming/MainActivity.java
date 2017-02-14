@@ -76,4 +76,8 @@ public class MainActivity extends AppCompatActivity {
     public void demoCustomEnter(View view) {
         startDemo(ActivityCustomEnter.class);
     }
+
+    public void demoActivityDialog(View view) {
+        startDemo(ActivityDialog.class);
+    }
 }
