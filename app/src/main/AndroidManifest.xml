@@ -60,6 +60,9 @@
         <activity
             android:name=".ActivityDialog"
             android:theme="@style/AppTheme.NoTitleDialog" />
+        <activity android:name=".ActivityFAB">
+
+        </activity>
     </application>
 
 </manifest>

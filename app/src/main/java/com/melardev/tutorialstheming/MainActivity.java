@@ -80,4 +80,8 @@ public class MainActivity extends AppCompatActivity {
     public void demoActivityDialog(View view) {
         startDemo(ActivityDialog.class);
     }
+
+    public void demoFAB(View view) {
+        startDemo(ActivityFAB.class);
+    }
 }
