@@ -15,6 +15,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,6 +29,7 @@
             <meta-data
                 android:name="android.service.wallpaper"
                 android:resource="@xml/mywallpaper" />
+
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
             </intent-filter>
@@ -55,6 +57,12 @@
         <activity android:name=".ActivityDialogs" />
         <activity android:name=".ActivityColorPickerAdv" />
         <activity android:name=".ActivityImmersive" />
+        <activity
+            android:name=".ActivityDialog"
+            android:theme="@style/AppTheme.NoTitleDialog" />
+        <activity android:name=".ActivityFAB">
+
+        </activity>
     </application>
 
 </manifest>
