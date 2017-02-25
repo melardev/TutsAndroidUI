@@ -84,4 +84,8 @@ public class MainActivity extends AppCompatActivity {
     public void demoFAB(View view) {
         startDemo(ActivityFAB.class);
     }
+
+    public void demoNavDrawerCustomView(View view) {
+        startDemo(ActivityNavDrawerList.class);
+    }
 }

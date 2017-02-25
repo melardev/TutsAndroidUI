@@ -124,6 +124,12 @@
             android:onClick="demoFAB"
             android:text="FAB" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="demoNavDrawerCustomView"
+            android:text="NavDrawer ListView" />
+
     </LinearLayout>
 
 </LinearLayout>
