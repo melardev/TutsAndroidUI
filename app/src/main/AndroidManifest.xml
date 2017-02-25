@@ -60,9 +60,10 @@
         <activity
             android:name=".ActivityDialog"
             android:theme="@style/AppTheme.NoTitleDialog" />
-        <activity android:name=".ActivityFAB">
-
-        </activity>
+        <activity android:name=".ActivityFAB" />
+        <activity
+            android:name=".ActivityNavDrawerList"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
