@@ -29,5 +29,6 @@ dependencies {
     compile 'com.android.support:design:25.1.1'
     compile 'com.larswerkman:HoloColorPicker:1.5'
     compile 'com.github.QuadFlask:colorpicker:0.0.12'
+    compile 'be.billington.calendar.recurrencepicker:library:1.1.1'
     testCompile 'junit:junit:4.12'
 }

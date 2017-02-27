@@ -15,7 +15,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -64,6 +63,17 @@
         <activity
             android:name=".ActivityNavDrawerList"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ActivityDialogPicker"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        </activity>
+        <activity android:name=".ActivityCreateShortcut">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
