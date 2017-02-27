@@ -37,6 +37,7 @@
             android:id="@+id/txtNavDrawerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:text="some text"
             android:textColor="#fff" />
 
@@ -61,7 +62,7 @@
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:background="#000"
-        android:layout_gravity="start">
+        android:layout_gravity="end">
 
         <ListView
             android:id="@+id/listNavDrawerView"

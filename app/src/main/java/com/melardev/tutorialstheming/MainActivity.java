@@ -20,12 +20,19 @@ import com.flask.colorpicker.OnColorSelectedListener;
 import com.flask.colorpicker.builder.ColorPickerClickListener;
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
 
+import static com.melardev.tutorialstheming.ActivityCreateShortcut.ACTION_SHORTCUT_CREATE;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (ACTION_SHORTCUT_CREATE.equals(getIntent().getAction())) {
+            Toast.makeText(this, "You came from shortcut", Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 
     private void startDemo(Class activityClass) {
@@ -87,5 +94,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void demoNavDrawerCustomView(View view) {
         startDemo(ActivityNavDrawerList.class);
+    }
+
+    public void demoTimePickers(View view) {
+        startDemo(ActivityDialogPicker.class);
     }
 }
