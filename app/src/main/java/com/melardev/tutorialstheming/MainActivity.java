@@ -99,4 +99,12 @@ public class MainActivity extends AppCompatActivity {
     public void demoTimePickers(View view) {
         startDemo(ActivityDialogPicker.class);
     }
+
+    public void demoAdapterViewFlipper(View view) {
+        startDemo(ActivityAdapterViewFlipper.class);
+    }
+
+    public void demoPdfRenderer(View view) {
+        startDemo(ActivityBasicPdfRenderer.class);
+    }
 }

@@ -117,5 +117,18 @@
             android:layout_height="wrap_content"
             android:onClick="demoTimePickers"
             android:text="TimePickers" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="demoAdapterViewFlipper"
+            android:text="AdapterViewFlipper" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoPdfRenderer"
+            android:text="PDF Renderer" />
+
     </LinearLayout>
 </ScrollView>
