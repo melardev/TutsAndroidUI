@@ -130,5 +130,23 @@
             android:onClick="demoPdfRenderer"
             android:text="PDF Renderer" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoSwipe"
+            android:text="SwipeRefreshLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoCircleImg"
+            android:text="CircleImageView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoCropImg"
+            android:text="Crop Image" />
+
     </LinearLayout>
 </ScrollView>

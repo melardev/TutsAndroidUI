@@ -6,6 +6,10 @@
         android:name="android.software.live_wallpaper"
         android:required="true" />
 
+    <!-- Needed for cropper library -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -75,7 +79,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityAdapterViewFlipper" />
-        <activity android:name=".ActivityBasicPdfRenderer"></activity>
+        <activity android:name=".ActivityBasicPdfRenderer" />
+        <activity android:name=".ActivityRefreshLayout" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".ActivityCircleImage" />
+        <activity android:name=".ActivityCropImage"></activity>
     </application>
 
 </manifest>

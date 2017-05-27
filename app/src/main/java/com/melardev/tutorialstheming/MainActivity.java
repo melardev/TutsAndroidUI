@@ -107,4 +107,16 @@ public class MainActivity extends AppCompatActivity {
     public void demoPdfRenderer(View view) {
         startDemo(ActivityBasicPdfRenderer.class);
     }
+
+    public void demoSwipe(View view) {
+        startDemo(ActivityRefreshLayout.class);
+    }
+
+    public void demoCircleImg(View view) {
+        startDemo(ActivityCircleImage.class);
+    }
+
+    public void demoCropImg(View view) {
+        startDemo(ActivityCropImage.class);
+    }
 }
