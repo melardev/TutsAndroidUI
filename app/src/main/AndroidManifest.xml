@@ -81,12 +81,17 @@
         <activity android:name=".ActivityAdapterViewFlipper" />
         <activity android:name=".ActivityBasicPdfRenderer" />
         <activity android:name=".ActivityRefreshLayout" />
+        <activity android:name=".ActivityCircleImage" />
+        <activity android:name=".ActivityCropImage"></activity>
+
+        <!-- external -->
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ActivityCircleImage" />
-        <activity android:name=".ActivityCropImage"></activity>
+
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
     </application>
 
 </manifest>
