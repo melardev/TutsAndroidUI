@@ -27,10 +27,6 @@ public class ActivityCropImage extends AppCompatActivity {
     private static final int RC_GET_IMG = 100;
     private ImageView imgCrop;
 
-    //Ucrop https://github.com/Yalantis/uCrop
-    //Cropper
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,8 +74,6 @@ public class ActivityCropImage extends AppCompatActivity {
             Toast.makeText(this, resultUri.getPath(), Toast.LENGTH_SHORT).show();
             imgCrop.setImageDrawable(null); //otherwise the imageView does not refresh after the first try
             imgCrop.setImageURI(resultUri);
-            File tempCropped = new File(getCacheDir(), "tempImgCropped.png");
-            tempCropped.delete();
         } else if (resultCode == UCrop.RESULT_ERROR) {
             final Throwable cropError = UCrop.getError(data);
         } else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
@@ -96,60 +90,67 @@ public class ActivityCropImage extends AppCompatActivity {
     }
 
     public void uCropDemo(View view) {
+        //https://github.com/Yalantis/uCrop
         //    Intent intent = new Intent(Intent.ACTION_GET_CONTENT).setType("image/*");
         //      startActivityForResult(intent, RC_GET_IMG);
 
         try {
-            InputStream is = getAssets().open("imgForCrop.JPG"); //Case sensitive!!!
-            File temp = new File(getCacheDir(), "tempImgOriginal.png");
-            FileOutputStream fos = new FileOutputStream(temp);
+            File tempFile = new File(getCacheDir(), "tempImgOriginal.png");
+            if (!tempFile.exists()) {
+                InputStream is = getAssets().open("imgForCrop.JPG"); //Case sensitive!!!
+                FileOutputStream fos = new FileOutputStream(tempFile);
+                byte[] buffer = new byte[1024];
+                int size;
+                while ((size = is.read(buffer)) != -1)
+                    fos.write(buffer, 0, size);
+                fos.close();
+            }
+
             File tempCropped = new File(getCacheDir(), "tempImgCropped.png");
-            byte[] buffer = new byte[1024];
-            int size;
-            while ((size = is.read(buffer)) != -1)
-                fos.write(buffer, 0, size);
-            fos.close();
-            Uri sourceUri = Uri.fromFile(temp);
+            Uri sourceUri = Uri.fromFile(tempFile);
             Uri destinationUri = Uri.fromFile(tempCropped);
             UCrop.of(sourceUri, destinationUri)
                     //.withAspectRatio(3, 2)
                     //.withMaxResultSize(MAX_WIDTH, MAX_HEIGHT)
                     .start(this);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void cropperDemo(View view) {
+        //https://github.com/ArthurHub/Android-Image-Cropper
         InputStream is = null; //Case sensitive!!!
         try {
             is = getAssets().open("imgForCrop.JPG");
 
-            File temp = new File(getCacheDir(), "tempImgOriginal.png");
-            FileOutputStream fos = new FileOutputStream(temp);
-            File tempCropped = new File(getCacheDir(), "tempImgCropped.png");
-            byte[] buffer = new byte[1024];
-            int size;
-            while ((size = is.read(buffer)) != -1)
-                fos.write(buffer, 0, size);
-            fos.close();
+            File tempFile = new File(getCacheDir(), "tempImgOriginal.png");
+            if (!tempFile.exists()) {
+                FileOutputStream fos = new FileOutputStream(tempFile);
+                byte[] buffer = new byte[1024];
+                int size;
+                while ((size = is.read(buffer)) != -1)
+                    fos.write(buffer, 0, size);
+                fos.close();
+            }
 
-            Uri sourceUri = Uri.fromFile(temp);
+            //File tempCropped = new File(getCacheDir(), "tempImgCropped.png");
+            Uri sourceUri = Uri.fromFile(tempFile);
             CropImage.activity(sourceUri)
                     .setActivityTitle("Cropper Demo")
                     .setGuidelines(CropImageView.Guidelines.ON).start(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         /*
-// start cropping activity for pre-acquired image saved on the device
-        CropImage.activity(imageUri)
-                .start(this);*/
-/*
-    // for fragment (DO NOT use `getActivity()`)
-        CropImage.activity()
-                .start(getContext(), this); */
+            start cropping activity for pre-acquired image saved on the device
+            CropImage.activity(imageUri).start(this);
+        */
+            /*
+            for fragment (DO NOT use `getActivity()`)
+            CropImage.activity().start(getContext(), this);
+            */
     }
 
 }

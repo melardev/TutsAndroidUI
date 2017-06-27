@@ -2,6 +2,7 @@ package com.melardev.tutorialstheming;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 public class ActivityCircleImage extends AppCompatActivity {
 
