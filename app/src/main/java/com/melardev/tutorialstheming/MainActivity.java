@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "You came from shortcut", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        startDemo(TestActivity.class);
     }
 
     private void startDemo(Class activityClass) {
