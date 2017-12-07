@@ -20,7 +20,6 @@
             android:layout_height="wrap_content"
             android:text="Demos : " />
 
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -52,7 +51,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="demoTabPagerCustom"
-            android:text="Tab and VPager Custom Tab" />
+            android:text="Tab and Pager Custom Tab" />
 
         <Button
             android:layout_width="match_parent"
@@ -117,5 +116,36 @@
             android:layout_height="wrap_content"
             android:onClick="demoTimePickers"
             android:text="TimePickers" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="demoAdapterViewFlipper"
+            android:text="AdapterViewFlipper" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoPdfRenderer"
+            android:text="PDF Renderer" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoSwipe"
+            android:text="SwipeRefreshLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoCircleImg"
+            android:text="CircleImageView" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="demoCropImg"
+            android:text="Crop Image" />
+
     </LinearLayout>
 </ScrollView>

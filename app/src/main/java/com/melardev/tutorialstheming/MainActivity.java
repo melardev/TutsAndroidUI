@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "You came from shortcut", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        startDemo(TestActivity.class);
     }
 
     private void startDemo(Class activityClass) {
@@ -98,5 +101,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void demoTimePickers(View view) {
         startDemo(ActivityDialogPicker.class);
+    }
+
+    public void demoAdapterViewFlipper(View view) {
+        startDemo(ActivityAdapterViewFlipper.class);
+    }
+
+    public void demoPdfRenderer(View view) {
+        startDemo(ActivityBasicPdfRenderer.class);
+    }
+
+    public void demoSwipe(View view) {
+        startDemo(ActivityRefreshLayout.class);
+    }
+
+    public void demoCircleImg(View view) {
+        startDemo(ActivityCircleImage.class);
+    }
+
+    public void demoCropImg(View view) {
+        startDemo(ActivityCropImage.class);
     }
 }

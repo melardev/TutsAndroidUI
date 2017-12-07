@@ -42,7 +42,7 @@ public class ActivityDialogPicker extends AppCompatActivity implements DatePicke
         Calendar cal = Calendar.getInstance();
         int hourOfDay = cal.get(Calendar.HOUR_OF_DAY);
         int minute = cal.get(Calendar.MINUTE);
-        TimePickerDialog dialog = new TimePickerDialog(this, this, hourOfDay, minute, true);
+        TimePickerDialog dialog = new TimePickerDialog(this, this, hourOfDay, minute, false);
         dialog.show();
     }
 

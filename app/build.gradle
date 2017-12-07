@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.melardev.tutorialstheming"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,10 +25,22 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.android.support:design:25.1.1'
+    //more powerful, preservs image quality, native
+    //or
+    //compile 'com.github.yalantis:ucrop:2.2.1'
+
+    //https://github.com/hdodenhof/CircleImageView
+    //https://github.com/vinc3m1/RoundedImageView
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.larswerkman:HoloColorPicker:1.5'
     compile 'com.github.QuadFlask:colorpicker:0.0.12'
     compile 'be.billington.calendar.recurrencepicker:library:1.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+    compile 'com.github.yalantis:ucrop:2.2.1-native'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.makeramen:roundedimageview:2.3.0'
     testCompile 'junit:junit:4.12'
 }

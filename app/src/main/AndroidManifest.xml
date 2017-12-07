@@ -6,6 +6,11 @@
         android:name="android.software.live_wallpaper"
         android:required="true" />
 
+    <!-- Needed for cropper library -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +20,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -65,15 +71,29 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ActivityDialogPicker"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".ActivityCreateShortcut">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityAdapterViewFlipper" />
+        <activity android:name=".ActivityBasicPdfRenderer" />
+        <activity android:name=".ActivityRefreshLayout" />
+        <activity android:name=".ActivityCircleImage" />
+        <activity android:name=".ActivityCropImage" />
+
+        <!-- external -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
